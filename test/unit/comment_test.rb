@@ -1,7 +1,7 @@
 require "webmock/test_unit"
 require "test/unit"
 require "shoulda"
-require_relative "../../lib/rsift"
+require "./lib/rsift"
 
 class CommentTest < Test::Unit::TestCase
   include WebMock::API
@@ -17,7 +17,7 @@ class CommentTest < Test::Unit::TestCase
     setup do
       body = '{"success":true}'
       stub_request(:get, /api.datasift.net\/comment/).
-        with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+        with(:headers => {'Accept'=>'*/*'}).
         to_return(:status => 200, :body => body, :headers => {})
       
     end

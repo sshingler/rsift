@@ -1,4 +1,4 @@
-require_relative "model"
+require File.dirname(__FILE__) + "/model.rb"
 
 module Rsift
   class Stream < Rsift::Model

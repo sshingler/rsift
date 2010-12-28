@@ -1,7 +1,7 @@
 require "webmock/test_unit"
 require "test/unit"
 require "shoulda"
-require_relative "../../lib/rsift"
+require "./lib/rsift"
 
 class DataTest < Test::Unit::TestCase
   include WebMock::API
@@ -16,9 +16,14 @@ class DataTest < Test::Unit::TestCase
   context "with data" do
     setup do
       body = '{"success":true}'
+      # stub_request(:get, /api.datasift.net\/stream.json/).
+      #   with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+      #   to_return(:status => 200, :body => body, :headers => {})
+      #   
       stub_request(:get, /api.datasift.net\/stream.json/).
-        with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
-        to_return(:status => 200, :body => body, :headers => {})
+          with(:headers => {'Accept'=>'*/*'}).
+          to_return(:status => 200, :body => body, :headers => {})
+        
       
     end
     

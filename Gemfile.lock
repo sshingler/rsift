@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     rsift (0.3.1)
-      em-http-request (= 0.2.15)
       jakal (= 0.1.95)
       json (= 1.4.6)
       rake (= 0.8.7)
@@ -10,7 +9,6 @@ PATH
       shoulda (= 2.11.3)
       test-unit (= 1.2.3)
       webmock (= 1.6.1)
-      yajl-ruby (= 0.7.8)
 
 GEM
   remote: http://rubygems.org/
@@ -22,10 +20,6 @@ GEM
       nokogiri (>= 1.3.3)
     crack (0.1.8)
     curb (0.7.9)
-    em-http-request (0.2.15)
-      addressable (>= 2.0.0)
-      eventmachine (>= 0.12.9)
-    eventmachine (0.12.10)
     hoe (2.8.0)
       rake (>= 0.8.7)
     hpricot (0.8.3)
@@ -46,13 +40,11 @@ GEM
     webmock (1.6.1)
       addressable (>= 2.2.2)
       crack (>= 0.1.7)
-    yajl-ruby (0.7.8)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  em-http-request (= 0.2.15)
   jakal (= 0.1.95)
   json (= 1.4.6)
   rake (= 0.8.7)
@@ -61,4 +53,3 @@ DEPENDENCIES
   shoulda (= 2.11.3)
   test-unit (= 1.2.3)
   webmock (= 1.6.1)
-  yajl-ruby (= 0.7.8)
