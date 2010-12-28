@@ -9,13 +9,14 @@ Current Limitations
 
 # To get started:
 
-stream = Rsift::Stream.new(api_url, api_key, username)
-json_response = @stream.do("my")
+  stream = Rsift::Stream.new(api_url, api_key, username)
+  
+  json_response = @stream.do("my")
 
-comment = Rsift::Comment.new(api_url, api_key, username)
+  comment = Rsift::Comment.new(api_url, api_key, username)
 
-opts = {:stream_id => "1", :comment => "test comment"}
+  opts = {:stream_id => "1", :comment => "test comment"}
 
-json_response = comment.do("create", opts)
+  json_response = comment.do("create", opts)
 
 Check the tests for more usage examples.
