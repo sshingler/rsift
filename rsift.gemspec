@@ -11,8 +11,10 @@ Gem::Specification.new do |s|
   s.homepage    = "http://github.com/sshingler/rsift"
   s.summary     = %q{Ruby wrapper for the Datasift API}
   s.description = <<-EOF
-A Ruby client/wrapper gem for the Datasift API. 
-Right now, it just handles data, streams and comments.
+This is a Ruby client wrapper for the Datasift API. 
+Right now, it just handles data, streams and comments. 
+There's also a class to handle receiving data from Datasift 
+using their websockets implementation.
 EOF
 
   s.files         = `git ls-files`.split("\n")
