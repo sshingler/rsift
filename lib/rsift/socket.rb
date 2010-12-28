@@ -10,7 +10,7 @@ module Rsift
         http = EventMachine::HttpRequest.new(
             "#{endpoint}#{stream_identifier}").get(:timeout => 0)
     
-        http.callback { puts "Connected to rsift" }
+        http.callback { puts "Connected to datasift" }
         http.errback { puts "something has failed" }
         http.disconnect { puts "oops, dropped connection?" }
     
