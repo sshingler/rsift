@@ -1,6 +1,6 @@
 # rsift
 
-This is a Ruby client wrapper for the Datasift API. Right now, it just handles data, streams and comments.
+This is a Ruby client wrapper for the Datasift API. Right now, it just handles data, streams and comments. There's also a class to handle receiving data from Datasift using their websockets implementation.
 
 Current Limitations
 
@@ -19,4 +19,12 @@ Current Limitations
 
   json_response = comment.do("create", opts)
 
+
+# The websockets API can be used like this:
+
+  Rsift::Socket.perform(stream_identifier) do |tweet|
+    puts tweet
+  end
+  
 Check the tests for more usage examples.
+
