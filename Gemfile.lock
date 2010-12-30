@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rsift (0.3.2)
+    rsift (0.3.4)
       em-http-request (= 0.2.15)
       jakal (= 0.1.95)
       json (= 1.4.6)
