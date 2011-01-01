@@ -16,7 +16,7 @@ module Rsift
         end
         
         http.errback do 
-          raise SocketDisconnect.new("Datasift threw an error")
+          raise SocketError.new("Datasift threw an error")
         end
         
         http.disconnect do
