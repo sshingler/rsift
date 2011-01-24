@@ -5,7 +5,7 @@ module Rsift
   class Socket
 
     def self.perform(stream_identifier)
-      endpoint = "ws://stream.datasift.net:8080/"
+      endpoint = "ws://websocket.datasift.net:8080/"
 
       EventMachine.run {
         http = EventMachine::HttpRequest.new(
