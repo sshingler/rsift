@@ -5,7 +5,7 @@ module Rsift
   class Socket
 
     def self.perform(stream_identifier)
-      endpoint = "ws://websocket.datasift.net:8080/"
+      endpoint = "ws://websocket.datasift.net/"
 
       EventMachine.run {
         http = EventMachine::HttpRequest.new(
@@ -15,7 +15,7 @@ module Rsift
           puts "Connected to datasift" 
         end
         
-        http.errback do 
+        http.errback do
           raise SocketError.new("Datasift threw an error")
         end
         
